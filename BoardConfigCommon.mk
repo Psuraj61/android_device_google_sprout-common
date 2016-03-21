@@ -71,12 +71,6 @@ USE_MINIKIN := true
 MALLOC_IMPL := dlmalloc
 DEVICE_RESOLUTION := 720x1280
 
-
-# Fonts
-EXTENDED_FONT_FOOTPRINT := true
-
-TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
-
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
 
 TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
