@@ -10,7 +10,7 @@ ARCH_ARM_HAVE_NEON := true
 TARGET_NO_BOOTLOADER := true
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a7
-TARGET_CPU_VARIANT:= cortex-a7
+TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # Storage allocations
@@ -39,20 +39,20 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/fstab.sprout
 
 # TWRP stuff
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_INCLUDE_JB_CRYPTO := true
+#TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+#TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+#TW_DEFAULT_EXTERNAL_STORAGE := true
+#TW_INCLUDE_JB_CRYPTO := true
 TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/mtk-msdc.0/by-name/userdata"
 TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
-TW_NO_USB_STORAGE := true
+#TW_NO_USB_STORAGE := true
 
 # OpenGL
-USE_OPENGL_RENDERER:= true
+USE_OPENGL_RENDERER := true
 
 # WiFi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
@@ -60,16 +60,16 @@ BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mt66xx
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_mt66xx
-WIFI_DRIVER_FW_PATH_PARAM:="/dev/wmtWifi"
-WIFI_DRIVER_FW_PATH_STA:=STA
-WIFI_DRIVER_FW_PATH_AP:=AP
-WIFI_DRIVER_FW_PATH_STA:=P2P
+WIFI_DRIVER_FW_PATH_PARAM := "/dev/wmtWifi"
+WIFI_DRIVER_FW_PATH_STA := STA
+WIFI_DRIVER_FW_PATH_AP := AP
+WIFI_DRIVER_FW_PATH_STA := P2P
 
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
 MALLOC_IMPL := dlmalloc
-DEVICE_RESOLUTION := 480x854
+DEVICE_RESOLUTION := 720x1280
 
 
 # Fonts
@@ -81,7 +81,6 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
 
 TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 
 # SELinux
