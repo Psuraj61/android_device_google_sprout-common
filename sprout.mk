@@ -64,7 +64,7 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/thermal.conf:system/etc/.tp/thermal.conf
      $(LOCAL_PATH)/configs/.ht120.mtc:system/etc/.tp/.ht120.mtc
      $(LOCAL_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf
-	
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/usr/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
@@ -73,7 +73,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
     $(LOCAL_PATH)/rootdir/system/etc/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
     $(LOCAL_PATH)/rootdir/system/etc/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
-	
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
@@ -88,10 +88,10 @@ PRODUCT_COPY_FILES += \
 # Correct bootanimation size for the screen
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
-	
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
-	
+
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     tinymix
 
-USE_CUSTOM_AUDIO_POLICY := 1
+#USE_CUSTOM_AUDIO_POLICY := 1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SproutRIL
