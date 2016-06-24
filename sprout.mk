@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \
 
-# Audio
+# Audio	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/rootdir/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
@@ -91,10 +91,6 @@ TARGET_SCREEN_WIDTH := 480
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
-
-#Hack for prebuilt kernel
-$(shell mkdir -p $OUT/obj/KERNEL_OBJ/usr)
-$(shell touch $OUT/obj/KERNEL_OBJ/usr/export_includes)
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
