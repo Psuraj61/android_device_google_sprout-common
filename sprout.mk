@@ -15,7 +15,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -86,8 +86,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.sprout.usb.rc:root/init.sprout.usb.rc
 
 # Correct bootanimation size for the screen
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 854
+TARGET_SCREEN_WIDTH := 480
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
@@ -105,9 +105,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SproutRIL
 
 # FM Radio
-#PRODUCT_PACKAGES += \
-#    FMRadioGoogle \
-#    FmRadioTrampoline2
+PRODUCT_PACKAGES += \
+    FMRadioGoogle \
+    FmRadioTrampoline2
 
 # Wifi
  PRODUCT_PACKAGES += \
@@ -135,12 +135,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     setup_fs \
-    e2fsck
-
-# Snap and Gello
-PRODUCT_PACKAGES += \
-    Snap \
-    Gello
+    e2fsck \
 
 # Dynamically set props
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
@@ -152,4 +147,4 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/google/sprout/sprout-vendor.mk)
+$(call inherit-product, vendor/google/sprout/sprout-vendor.mk)
