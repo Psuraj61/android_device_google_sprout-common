@@ -15,7 +15,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_PACKAGES += \
+    Gello \
+    Snap
+
+PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
@@ -122,7 +126,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1
-	
+
 PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory
@@ -135,21 +139,16 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     setup_fs \
-    e2fsck
-
-# Snap and Gello
-PRODUCT_PACKAGES += \
-    Snap \
-    Gello
+    e2fsck \
 
 # Dynamically set props
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.name \
     ro.product.manufacturer \
     ro.product.model
-	
+
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/google/sprout/sprout-vendor.mk)
+$(call inherit-product, vendor/google/sprout/sprout-vendor.mk)
