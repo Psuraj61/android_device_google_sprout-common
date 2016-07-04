@@ -32,7 +32,6 @@ import android.os.SystemProperties;
 import android.telephony.Rlog;
 import android.telephony.SignalStrength;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
