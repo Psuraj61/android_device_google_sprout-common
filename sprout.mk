@@ -110,16 +110,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadioGoogle \
-    FmRadioTrampoline2 \
-    FMRadio \
-    libfmjni \
-    libfmmt6620 \
-    libfmmt6628 \
-    libfmmt6627 \
-    libfmmt6630 \
-    libfmcust \
-    libmtkplayer
-
+    FmRadioTrampoline2
 
 # Wifi
  PRODUCT_PACKAGES += \
