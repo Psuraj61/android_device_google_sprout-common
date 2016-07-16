@@ -61,6 +61,7 @@ TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
+TARGET_USERIMAGES_USE_EXT4 := true
 #TW_NO_USB_STORAGE := true
 
 # OpenGL
