@@ -47,10 +47,8 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \
-PRODUCT_PACKAGES += \
-     YGPS
 
-# Audio
+# Audio	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/rootdir/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
@@ -112,16 +110,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadioGoogle \
-    FmRadioTrampoline2 \
-    FMRadio \
-    libfmjni \
-    libfmmt6620 \
-    libfmmt6628 \
-    libfmmt6627 \
-    libfmmt6630 \
-    libfmcust \
-    libmtkplayer
-
+    FmRadioTrampoline2
 
 # Wifi
  PRODUCT_PACKAGES += \
