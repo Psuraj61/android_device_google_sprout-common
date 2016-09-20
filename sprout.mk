@@ -92,8 +92,10 @@ TARGET_SCREEN_WIDTH := 480
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
 
+#FMRadio
 PRODUCT_PACKAGES += \
-    Gello
+    FMRadioGoogle \
+    FMRadioTrampoline2
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
