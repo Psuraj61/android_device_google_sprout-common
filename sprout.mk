@@ -150,4 +150,4 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # call the proprietary setup
-$(call inherit-product, vendor/google/seedmtk/sprout-vendor.mk)
+$(call inherit-product, vendor/google/seedmtk/seedmtk-vendor.mk)
