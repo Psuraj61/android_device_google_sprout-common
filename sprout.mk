@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \
 
-# Audio	
+# Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/rootdir/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
@@ -86,16 +86,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.sprout.usb.rc:root/init.sprout.usb.rc
 
 # Correct bootanimation size for the screen
-TARGET_SCREEN_HEIGHT := 854
-TARGET_SCREEN_WIDTH := 480
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
-
-#FMRadio
-PRODUCT_PACKAGES += \
-    FMRadioGoogle \
-    FMRadioTrampoline2
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -104,15 +99,8 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     tinymix
 
-#USE_CUSTOM_AUDIO_POLICY := 1
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SproutRIL
-
-# FM Radio
-PRODUCT_PACKAGES += \
-    FMRadioGoogle \
-    FmRadioTrampoline2
 
 # Wifi
  PRODUCT_PACKAGES += \
